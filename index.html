@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Blanca Astilleros Porfolio</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="johndoe/public_html/assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+    <link rel="stylesheet" href="johndoe/public_html/assets/css/johndoe.css">
+    <style>
+        .portfolio-collage {
+            padding: 0px 0;
+        }
+        .collage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .collage-item {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%; /* Mantiene la proporción cuadrada */
+            overflow: hidden;
+            border-radius: 15px;
+            background: #fff;
+            border: 4px solid #FFC1CC; /* Marco rosa claro */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .collage-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .image-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .image-caption {
+            position: absolute;
+            bottom: -50px; /* Inicialmente oculto debajo */
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background: #FFC1CC; /* Fondo rosa claro */
+            color: #fff;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: bottom 0.3s ease;
+        }
+        .collage-item:hover .image-caption {
+            bottom: 0; /* Sube al pasar el ratón */
+        }
+        @media (max-width: 992px) {
+            .collage-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        @media (max-width: 576px) {
+            .collage-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .image-frame img {
+                object-fit: contain; /* Ajuste en móviles para mostrar completo */
+            }
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <a href="johndoe/public_html/components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i class="ti-shift-left-alt"></i> Components</a>
+    <header class="header">
+        <div class="container">
+            <ul class="social-icons pt-3">
+                <li class="social-item"><a class="social-link text-light" href="#"><i aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i aria-hidden="true"></i></a></li>
+            </ul>  
+            <div class="header-content">
+                <h4 class="header-subtitle" >Hola, soy</h4>
+                <h1 class="header-title">Blanca Astilleros</h1>
+                <h6 class="header-mono" >Diseñadora gráfica digital y multimedia</h6>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Inicio<br>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Sobre Mí" class="nav-link">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item"> </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img src="assets/imags/mi foto.JPEG" alt="" class="brand-img">
+                    <li class="brand-txt">
+                        <h5 class="brand-title">Blanca Astilleros</h5>
+                        <div class="brand-subtitle">Diseñadora gráfica digital y multimedia</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Porfolio</a>
+                    </li>
+                    <li class="nav-item"> </li>
+                    <li class="nav-item last-item">
+                        <a href="#contact" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div id="about" class="row about-section">
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">¿Quién soy?</h3>
+                <span class="line mb-5"></span>
+                <h5 class="mb-3">Diseñadora gráfica digital y multimedia</h5>
+                <a href="assets/archivos/mi_cv.pdf" class="btn btn-outline-danger" download>
+                    <i class="icon-down-circled2"></i> Descarga mi CV
+                </a>
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Info Personal</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Fecha de nacimiento </span> : 19/12/1999</li>
+                    <li><span>Email</span> : blancastilleros@gmail.com</li>
+                    <li><span>Dirección</span> : Majadahonda, Madrid</li> 
+                </ul>
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light"> </h3>
+                <span class="line mb-5"></span>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-widget icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Ux/Ui</h6>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-paint-bucket icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Diseño gráfico digital y multimedia</h6>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-stats-up icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Branding/Identidad de marcas</h6>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Section -->
+    <section class="section bg-custom-gray" id="portfolio">
+        <div class="container">
+            <h1 class="mb-5"><span class="text-danger">Mi</span> Porfolio</h1>
+            <div class="portfolio-collage">
+                <div class="collage-grid">
+                    <div class="collage-item">
+                        <div class="image-frame">
+                            <img src="assets/imags/Proyectos/App Musik/Mockup 1.png" class="img-fluid" alt="App Mockup 1">
+                        </div>
+                        <div class="image-caption">App</div>
+                    </div>
+                    <div class="collage-item">
+                        <div class="image-frame">
+                            <img src="assets/imags/Proyectos/App Musik/Mockup 2.png" class="img-fluid" alt="App Mockup 2">
+                        </div>
+                        <div class="image-caption">App</div>
+                    </div>
+                    <div class="collage-item">
+                        <div class="image-frame">
+                            <img src="assets/imags/Proyectos/Revista/Magazine_Mockup Abierto.png" class="img-fluid" alt="Revista Mockup Abierto">
+                        </div>
+                        <div class="image-caption">Diseño Gráfico</div>
+                    </div>
+                    <div class="collage-item">
+                        <div class="image-frame">
+                            <img src="assets/imags/Proyectos/Revista/Magazine_Mockup Portada.png" class="img-fluid" alt="Revista Mockup Portada">
+                        </div>
+                        <div class="image-caption">Diseño Gráfico</div>
+                    </div>
+                    <div class="collage-item">
+                        <div class="image-frame">
+                            <img src="assets/imags/Proyectos/SENZA/Senza Mockup.png" class="img-fluid" alt="Senza Mockup">
+                        </div>
+                        <div class="image-caption">Branding</div>
+                    </div>
+                    <div class="collage-item">
+                        <div class="image-frame">
+                            <img src="assets/imags/Proyectos/SENZA/SENZA Tienda.jpeg" class="img-fluid" alt="SENZA Tienda">
+                        </div>
+                        <div class="image-caption">Branding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of portfolio section -->
+    <div class="section contact" id="contact">
+        <div class="map" style="background-color: pink; height: 700px;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h4 class="contact-title">¿Hablamos?</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Nombre *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="mensaje" placeholder="Mensaje *" rows="7" required></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit" class="form-control btn btn-primary" >Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info-card">
+                        <h4 class="contact-title">Contacto</h4>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="icon-md"></i>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-map-alt icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Dirección:<br> <span class="text-muted"> Majadahonda, Madrid</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-envelope icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">blancastillerosgmail.com</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer py-3">
+        <div class="container">
+            <p class="small mb-0 text-light">
+                © <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a> 
+            </p>
+        </div>
+    </footer>
+
+    <!-- core  -->
+    <script src="johndoe/public_html/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="johndoe/public_html/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="johndoe/public_html/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="johndoe/public_html/assets/vendors/isotope/isotope.pkgd.js"></script>
+    
+    <!-- Google maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+
+    <!-- JohnDoe js -->
+    <script src="johndoe/public_html/assets/js/johndoe.js"></script>
+</body>
+</html>
